@@ -2,6 +2,8 @@ import { HeartIcon } from 'lucide-react';
 import React, { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+// Changed from import to using public URL
+// import HeroVideo from '../assets/Videos/Final 2.mp4';
 
 const HeroSection = () => {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -37,6 +39,11 @@ const HeroSection = () => {
       {/* ✅ Responsive Styles */}
       <style>
         {`
+          /* Default styles for all screen sizes */
+          .hero-container {
+            height: auto !important;
+          }
+          
           /* Large screens (4K, wide displays) */
           @media (min-width: 1600px) {
             .hero-content h1 {
@@ -48,6 +55,21 @@ const HeroSection = () => {
             }
             .hero-container {
               padding: 150px 4rem !important;
+              height: auto !important;
+            }
+          }
+
+          /* Laptops & Desktops */
+          @media (min-width: 1281px) and (max-width: 1599px) {
+            .hero-container {
+              padding: 125px 2rem !important;
+              height: auto !important;
+            }
+            .hero-content h1 {
+              font-size: 2.6rem !important;
+            }
+            .hero-content p {
+              font-size: 1.1rem !important;
             }
           }
 
@@ -55,7 +77,6 @@ const HeroSection = () => {
           @media (max-width: 1280px) {
             .hero-container {
               padding: 120px 2rem !important;
-              /* Changed from height: 100vh to height: auto for better responsiveness */
               height: auto !important;
             }
             .hero-content h1 {
@@ -70,6 +91,7 @@ const HeroSection = () => {
           @media (max-width: 1024px) {
             .hero-container {
               padding: 100px 1.5rem !important;
+              height: auto !important;
             }
             .hero-content {
               max-width: 90% !important;
