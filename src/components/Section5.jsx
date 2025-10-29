@@ -452,7 +452,7 @@ const FeaturedProjects = () => {
         `}</style>
 
         {/* Decorative 3D Element - Top Left - Outside container */}
-        <div 
+        <motion.div 
           className="decor-left"
           style={{
             position: 'absolute',
@@ -460,6 +460,20 @@ const FeaturedProjects = () => {
             left: '1%',
             zIndex: 1,
           }}
+          initial={{ opacity: 0, x: -30, y: -30 }}
+          whileInView={{ 
+            opacity: 0.9, 
+            x: 0,
+            y: [0, -5, 0],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "reverse",
+            delay: 0.1
+          }}
+          viewport={{ once: true, margin: '-50px' }}
         >
           <img 
             src="./assets/images/Section5-2.png" 
@@ -470,10 +484,10 @@ const FeaturedProjects = () => {
               height: '220px'
             }}
           />
-        </div>
+        </motion.div>
 
         {/* Decorative 3D Element - Bottom Right - Outside container */}
-        <div 
+        <motion.div 
           className="decor-right"
           style={{
             position: 'absolute',
@@ -481,6 +495,20 @@ const FeaturedProjects = () => {
             right: '-2%',
             zIndex: 1,
           }}
+          initial={{ opacity: 0, x: 30, y: 30 }}
+          whileInView={{ 
+            opacity: 0.9, 
+            x: 0,
+            y: [0, -5, 0],
+            rotate: [0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "reverse",
+            delay: 0.3
+          }}
+          viewport={{ once: true, margin: '-50px' }}
         >
           <img 
             src="./assets/images/Section5-1.png" 
@@ -491,7 +519,7 @@ const FeaturedProjects = () => {
               height: '240px'
             }}
           />
-        </div>
+        </motion.div>
 
         <div className="featured-container">
           {/* Header */}

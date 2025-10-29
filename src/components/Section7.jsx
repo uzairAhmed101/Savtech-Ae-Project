@@ -510,12 +510,14 @@ const TrustedByLeaders = () => {
         whileInView={{ 
           opacity: 0.85,
           x: 0,
-          y: 0,
+          y: [0, -5, 0],
+          rotate: [0, 2, 0]
         }}
         transition={{ 
-          duration: 1.2,
-          delay: 0.2,
-          ease: "easeOut"
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "reverse",
+          delay: 0.2
         }}
         viewport={{ once: true, margin: "-50px" }}
       >

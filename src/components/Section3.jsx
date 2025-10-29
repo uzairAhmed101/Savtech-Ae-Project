@@ -68,8 +68,18 @@ const CoreServices = () => {
           zIndex: 1,
         }}
         initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.7 }}
+        whileInView={{ 
+          opacity: 1, 
+          x: 0,
+          y: [0, -5, 0],
+          rotate: [0, -2, 0]
+        }}
+        transition={{ 
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "reverse",
+          delay: 0.7
+        }}
         viewport={{ once: true, margin: '-50px' }}
       >
         <img
@@ -297,7 +307,7 @@ const styles = {
   container: {
     width: '100%',
     minHeight: '100vh',
-    background: '#000000',
+    background: 'linear-gradient(135deg, #0a0e27 0%, #1a1535 50%, #0f1229 100%)',
     padding: '1rem 7.9rem',
     display: 'flex',
     flexDirection: 'column',

@@ -15,10 +15,20 @@ const WhoWeAre = () => {
           width: '100%',
           zIndex: 1,
         }}
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 0.7, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ 
+          opacity: 0.7, 
+          x: 0,
+          y: [0, -5, 0],
+          rotate: [0, 2, 0]
+        }}
         viewport={{ once: true, margin: '-50px' }}
+        transition={{ 
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "reverse",
+          delay: 0.3
+        }}
       >
         <img
           // Using public URL instead of import
@@ -82,7 +92,7 @@ const WhoWeAre = () => {
               <FeatureCard
                 icon={<StrategyIcon />}
                 title="Strategic PR Excellence"
-                description="Craft compelling narratives that resonate with Middle Eastern audiences and global markets."
+                description="Craft compelling narratives that resonate with Middle East audiences and global markets."
                 type="strategy"
               />
             </motion.div>
@@ -94,16 +104,35 @@ const WhoWeAre = () => {
       <style>
         {`
         .feature-icon{
-          width: 15%;
+          width: 20%;
           margin-bottom: 1rem;
+          position: relative;
+          padding: 3px;
+          border-radius: 20%;
         }
-          .feature-icon-inner {
-            width: fit-content;
-            height: fit-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
+        
+        .feature-icon.ai {
+          background: linear-gradient(45deg, #ff0000, #ffff00);
+        }
+        
+        .feature-icon.influencer {
+          background: linear-gradient(45deg, #00ff00, #00ffff);
+        }
+        
+        .feature-icon.strategy {
+          background: linear-gradient(45deg, #0000ff, #ff00ff);
+        }
+        
+        .feature-icon-inner {
+          width: 100%;
+          height: 100%;
+          background: #0F1229;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
+          border-radius: 10px;
+        }
           
           @media (max-width: 1200px) {
             .cards-container {
@@ -160,6 +189,9 @@ const WhoWeAre = () => {
             }
             .feature-card {
               padding: 1rem !important;
+            }
+            .feature-icon {
+              width: 20%;
             }
             img {
               max-width: 60% !important;
@@ -241,7 +273,8 @@ const styles = {
     position: 'relative',
     width: '100%',
     minHeight: '100vh',
-    background: '#000000',
+     background:
+      'linear-gradient(135deg, #0a0e27 0%, #1a1040 50%, #0f1229 100%)',
     padding: '2rem 7.9rem',
     overflow: 'visible',
     display: 'flex',
