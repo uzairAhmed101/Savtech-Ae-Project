@@ -216,7 +216,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding: '125px 2rem',
-    height: 'auto',
+    height: '100vh',
   },
   content: {
     position: 'relative',

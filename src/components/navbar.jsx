@@ -165,6 +165,12 @@ const NavBar = () => {
             }
           }
 
+          @media (max-width: 765px) {
+            .nav-links.active {
+              padding: 1.5rem !important;
+            }
+          }
+
           @media (max-width: 600px) {
             .nav-links {
               width: 220px !important;
@@ -294,6 +300,9 @@ const styles = {
     gap: '2rem',
     margin: 0,
     padding: 0,
+  },
+  navLinksActive: {
+    padding: '2rem',
   },
   navItem: {
     position: 'relative',

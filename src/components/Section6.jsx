@@ -73,7 +73,7 @@ const InfluencerMarketing = () => {
           .rocket-decor {
             position: absolute;
             top: 0%;
-            left: 0%;
+            left: -1%;
             opacity: 0.95;
             z-index: 1;
             rotate: 15deg;
@@ -130,7 +130,7 @@ const InfluencerMarketing = () => {
 
           .stat-card {
             background: linear-gradient(135deg, rgba(30, 20, 60, 0.6) 0%, rgba(20, 15, 40, 0.4) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.2);
+            border: 1px solid hsl(203, 85%, 45%);
             border-radius: 20px;
             padding: 2rem 1.5rem;
             backdrop-filter: blur(10px);
@@ -139,26 +139,20 @@ const InfluencerMarketing = () => {
             animation: scaleIn 0.6s ease-out backwards;
           }
 
-          .stat-card:nth-child(1) { animation-delay: 0.1s; }
-          .stat-card:nth-child(2) { animation-delay: 0.2s; }
-          .stat-card:nth-child(3) { animation-delay: 0.3s; }
-          .stat-card:nth-child(4) { animation-delay: 0.4s; }
-
-          @keyframes scaleIn {
-            from {
-              opacity: 0;
-              transform: scale(0.9);
-            }
-            to {
-              opacity: 1;
-              transform: scale(1);
-            }
+          .stat-card:nth-child(1) {
+            border: 1px solid hsl(265, 67%, 53%);
           }
 
-          .stat-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(139, 92, 246, 0.5);
-            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.3);
+          .stat-card:nth-child(2) {
+            border: 1px solid hsl(210, 85%, 55%);
+          }
+
+          .stat-card:nth-child(3) {
+            border: 1px solid hsl(337, 89%, 52%);
+          }
+
+          .stat-card:nth-child(4) {
+            border: 1px solid hsl(25, 85%, 55%);
           }
 
           .stat-icon {
@@ -171,6 +165,32 @@ const InfluencerMarketing = () => {
             font-size: 1.5rem;
             margin-bottom: 1.2rem;
             transition: all 0.3s ease;
+          }
+
+          .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: hsl(337, 89%, 52%);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.3);
+          }
+
+          .stat-card:nth-child(1):hover {
+            border-color: hsl(265, 67%, 53%);
+            box-shadow: 0 20px 50px rgba(30, 144, 255, 0.3);
+          }
+
+          .stat-card:nth-child(2):hover {
+            border-color: hsl(210, 85%, 55%);
+            box-shadow: 0 20px 50px rgba(30, 144, 255, 0.3);
+          }
+
+          .stat-card:nth-child(3):hover {
+            border-color: hsl(337, 89%, 52%);
+            box-shadow: 0 20px 50px rgba(255, 0, 128, 0.3);
+          }
+
+          .stat-card:nth-child(4):hover {
+            border-color: hsl(25, 85%, 55%);
+            box-shadow: 0 20px 50px rgba(255, 140, 0, 0.3);
           }
 
           .stat-card:hover .stat-icon {
@@ -194,7 +214,7 @@ const InfluencerMarketing = () => {
 
           .features-container {
             background: linear-gradient(135deg, rgba(30, 20, 60, 0.5) 0%, rgba(20, 15, 40, 0.3) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.2);
+            border: 1px solid hsl(203, 85%, 45%);
             border-radius: 24px;
             padding: 3rem;
             backdrop-filter: blur(15px);
@@ -206,11 +226,6 @@ const InfluencerMarketing = () => {
 
           .feature-item {
             text-align: center;
-            transition: all 0.3s ease;
-          }
-
-          .feature-item:hover {
-            transform: translateY(-5px);
           }
 
           .feature-title {
@@ -223,7 +238,7 @@ const InfluencerMarketing = () => {
 
           .feature-description {
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #FFFFFF;
             line-height: 1.6;
             margin: 0;
           }
@@ -251,7 +266,8 @@ const InfluencerMarketing = () => {
 
             .rocket-decor {
               width: 140px;
-              left: 0%;
+              top: '-1%',
+              left: '-1%',
             }
 
           }
@@ -261,6 +277,10 @@ const InfluencerMarketing = () => {
             .influencer-container {
               padding: 3rem 1rem;
             }
+              .rocket-image{
+                  width: 250px;
+                  height: 200px;
+              }
 
             .header-section {
               margin-bottom: 2.5rem;
@@ -310,12 +330,13 @@ const InfluencerMarketing = () => {
 
             .feature-description {
               font-size: 0.85rem;
+              color: #FFFFFF !important;
             }
 
             .rocket-decor {
               width: 100px;
-              top: 5%;
-              left: -5%;
+             top: '-1%',
+            left: '-1%',
               opacity: 0.6;
             }
 
@@ -349,6 +370,7 @@ const InfluencerMarketing = () => {
 
             .feature-description {
               font-size: 0.8rem;
+               color: #FFFFFF;
             }
           }
 
@@ -398,8 +420,8 @@ const InfluencerMarketing = () => {
           }
 
           .rocket-image {
-            width: 80%;
-            height: 80%;
+            width: 90%;
+            height: 90%;
             filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           }
@@ -426,17 +448,17 @@ const InfluencerMarketing = () => {
           className="rocket-decor"
           style={{
             position: 'absolute',
-            top: '0%',
-            left: '0%',
+            top: '-10%',
+            left: '-4%',
             zIndex: 1,
           }}
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{ 
             opacity: 0.95,
-            y: 0,
+            x: 0,
           }}
           transition={{ 
-            duration: 1.2,
+            duration: 1.5,
             delay: 0.3,
             ease: "easeOut"
           }}
@@ -461,7 +483,16 @@ const InfluencerMarketing = () => {
           {/* Stats Grid */}
           <div className="stats-grid">
             {stats.map((stat) => (
-              <div key={stat.id} className="stat-card">
+              <motion.div 
+                key={stat.id} 
+                className="stat-card"
+                whileHover={{
+                  y: -10,
+                  scale: 1.02,
+                  boxShadow: '0 25px 60px rgba(124, 58, 237, 0.35)',
+                }}
+                transition={{ duration: 0.4 }}
+              >
                 <div 
                   className="stat-icon" 
                   style={{ backgroundColor: `${stat.color}20`, color: stat.color }}
@@ -469,7 +500,7 @@ const InfluencerMarketing = () => {
                   {stat.icon}
                 </div>
                 <h3 className="stat-title">{stat.title}</h3>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -477,7 +508,10 @@ const InfluencerMarketing = () => {
           <div className="features-section">
             <div className="features-container">
               {features.map((feature) => (
-                <div key={feature.id} className="feature-item">
+                <div 
+                  key={feature.id} 
+                  className="feature-item"
+                >
                   <h3 className="feature-title">{feature.title}</h3>
                   <p className="feature-description">{feature.description}</p>
                 </div>

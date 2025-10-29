@@ -58,6 +58,7 @@ const CoreServices = () => {
     <div style={{ position: 'relative', width: '100%' }}>
       {/* Decorative Top-Right Element */}
       <motion.div
+        className="decorRight"
         style={{
           ...styles.decorRight,
           position: 'absolute',
@@ -152,6 +153,20 @@ const CoreServices = () => {
             }
             .core-subtitle {
               font-size: 0.85rem !important;
+            }
+          }
+
+          @media (max-width: 425px) {
+            .core-container {
+              padding: 0 !important;
+            }
+            
+            .decorRight {
+              display: none !important;
+            }
+
+            .core-container{
+            padding: 2rem !important;
             }
           }
         `}

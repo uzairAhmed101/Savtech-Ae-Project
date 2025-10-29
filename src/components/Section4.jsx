@@ -49,8 +49,8 @@ const CompaniesWeWorkWith = () => {
         style={{
           ...styles.decorRight,
           position: 'absolute',
-          bottom: '-20%',
-          right: '2%',
+          bottom: '-6%',
+          right: '-2%',
           width: '100%',
           zIndex: 1,
         }}
@@ -133,7 +133,12 @@ const CompaniesWeWorkWith = () => {
               font-size: 1rem !important;
             }
           }
+          @media (max-width: 425px) {
+            .decor-left {
+              display: none !important;
+            }
 
+          }
           @media (max-width: 360px) {
             .companies-title {
               font-size: 1.4rem !important;
@@ -245,8 +250,9 @@ const styles = {
   },
   decorRight: {
     position: 'absolute',
-    bottom: '-20%',
-    right: '0%',
+   bottom: '-9%',
+    right: '-5%',
+    rotate: '5deg',
     animation: 'float3D 12s ease-in-out infinite',
     animationDelay: '1s',
     opacity: 0.7,

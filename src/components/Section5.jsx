@@ -85,8 +85,8 @@ const FeaturedProjects = () => {
 
           .decor-right {
             position: absolute;
-            bottom: 0%;
-            right: 0%;
+            bottom: -9%;
+            right: -2%;
             opacity: 0.9;
             z-index: 1;
           }
@@ -264,11 +264,6 @@ const FeaturedProjects = () => {
               font-size: 2.8rem;
             }
 
-            .projects-grid {
-              grid-template-columns: repeat(2, 1fr);
-              grid-template-rows: repeat(4, 250px);
-              gap: 1.3rem;
-            }
 
             .project-card:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
             .project-card:nth-child(2) { grid-area: 2 / 1 / 4 / 2; }
@@ -304,7 +299,8 @@ const FeaturedProjects = () => {
             }
 
             .3D Blob Decorative Element - Top Left{
-            display: none;
+              width: 150px;
+              height: 150px;
             }
             .decor-left,
             .decor-right {
@@ -315,6 +311,8 @@ const FeaturedProjects = () => {
             .decor-left {
               width: 109px;
               height: 109px;
+              top: 0%;
+              left: -2%;
             }
 
             .featured-header {
@@ -331,10 +329,10 @@ const FeaturedProjects = () => {
               padding: 0 0.5rem;
             }
 
+            
             .projects-grid {
-              grid-template-columns: 1fr;
-              grid-template-rows: auto;
-              gap: 1.2rem;
+              gap: 1.3rem;
+              grid: none;
             }
 
             .project-card {
@@ -364,14 +362,14 @@ const FeaturedProjects = () => {
             }
 
             .decor-left {
-              top: 2%;
-              left: -8%;
+              top: 0%;
+              left: 0%;
               opacity: 0.4;
             }
 
             .decor-right {
-              bottom: 0%;
-              right: 0%;
+              bottom: -9%;
+              right: -2%;
               opacity: 0.4;
             }
 
@@ -402,6 +400,7 @@ const FeaturedProjects = () => {
 
             .projects-grid {
               gap: 1rem;
+              padding: 0;
             }
 
             .project-card {
@@ -478,8 +477,8 @@ const FeaturedProjects = () => {
           className="decor-right"
           style={{
             position: 'absolute',
-            bottom: '0%',
-            right: '0%',
+            bottom: '-9%',
+            right: '-2%',
             zIndex: 1,
           }}
         >

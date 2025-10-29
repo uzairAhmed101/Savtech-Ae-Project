@@ -28,7 +28,7 @@ const WhoWeAre = () => {
         />
       </motion.div>
 
-      <div style={styles.container}>
+      <div style={styles.container} className="container">
         {/* Content */}
         <div style={styles.content}>
           {/* Header */}
@@ -93,6 +93,18 @@ const WhoWeAre = () => {
       {/* ✅ Inline Responsive Media Queries */}
       <style>
         {`
+        .feature-icon{
+          width: 15%;
+          margin-bottom: 1rem;
+        }
+          .feature-icon-inner {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
           @media (max-width: 1200px) {
             .cards-container {
               grid-template-columns: repeat(2, 1fr) !important;
@@ -125,6 +137,10 @@ const WhoWeAre = () => {
             h2 {
               font-size: 2.2rem !important;
               line-height: 1.3 !important;
+            }
+
+            .container{
+              padding: 0 2rem !important;
             }
             p {
               font-size: 0.95rem !important;
@@ -160,6 +176,19 @@ const WhoWeAre = () => {
             .feature-card {
               padding: 0.8rem !important;
             }
+          }
+
+          @media (max-width: 425px) {
+            .container {
+              padding: 0 !important;
+            }
+              .decorImage:{
+              display: none !important;
+              }
+
+              .decorLeft{
+                display: none !important;
+              }
           }
         `}
       </style>
@@ -286,6 +315,8 @@ const styles = {
     color: '#94a3b8',
     lineHeight: 1.7,
   },
+  
+
 };
 
 export default WhoWeAre;

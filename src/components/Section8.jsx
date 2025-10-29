@@ -93,9 +93,15 @@ export default function MagicContactForm() {
             gap: 20px;
           }
         }
+
+        @media (max-width: 425px) {
+          .section8-container {
+            padding: 0 !important;
+          }
+        }
       `}</style>
 
-      <div style={styles.container}>
+      <div style={styles.container} className="section8-container">
         {/* Video Background */}
         <video 
           autoPlay 
@@ -156,11 +162,15 @@ export default function MagicContactForm() {
                 
                 <div style={styles.contactItem}>
                   <motion.div 
-                    style={styles.iconWrapper}
+                    style={styles.emailIconWrapper}
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    <Mail size={20} color="#fff" />
+                    <img 
+                      src="./assets/images/Mail-Icon.png" 
+                      alt="Email"
+                      style={styles.contactImage}
+                    />
                   </motion.div>
                   <div style={styles.contactText}>
                     <div style={styles.contactLabel}>Email</div>
@@ -170,11 +180,15 @@ export default function MagicContactForm() {
 
                 <div style={styles.contactItem}>
                   <motion.div 
-                    style={styles.iconWrapper}
+                    style={styles.phoneIconWrapper}
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    <Phone size={20} color="#fff" />
+                    <img 
+                      src="./assets/images/Phone-Icon.png" 
+                      alt="Phone"
+                      style={styles.contactImage}
+                    />
                   </motion.div>
                   <div style={styles.contactText}>
                     <div style={styles.contactLabel}>Phone</div>
@@ -184,11 +198,15 @@ export default function MagicContactForm() {
 
                 <div style={styles.contactItem}>
                   <motion.div 
-                    style={styles.iconWrapper}
+                    style={styles.locationIconWrapper}
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    <MapPin size={20} color="#fff" />
+                    <img 
+                      src="./assets/images/Location-Icon.png" 
+                      alt="Location"
+                      style={styles.contactImage}
+                    />
                   </motion.div>
                   <div style={styles.contactText}>
                     <div style={styles.contactLabel}>Location</div>
@@ -411,6 +429,42 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
+  },
+  // Individual icon styles with unique backgrounds
+  emailIconWrapper: {
+    width: '48px',
+    height: '48px',
+    borderRadius: '12px',
+    background: 'linear-gradient(135deg, #8b5cf6, #6366f1)', // Purple gradient
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+  phoneIconWrapper: {
+    width: '48px',
+    height: '48px',
+    borderRadius: '12px',
+    background: 'hsl(203, 85%, 45%)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+  locationIconWrapper: {
+    width: '48px',
+    height: '48px',
+    borderRadius: '12px',
+    background: 'hsl(337, 89%, 52%)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+  contactImage: {
+    width: '60%',
+    height: '60%',
+    objectFit: 'contain',
   },
   contactText: {
     display: 'flex',
