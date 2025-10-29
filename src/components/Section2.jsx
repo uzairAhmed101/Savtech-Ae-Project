@@ -208,16 +208,11 @@ const FeatureCard = ({ icon, title, description, type }) => {
       }}
       transition={{ duration: 0.4, ease: 'easeInOut' }}
     >
-      <motion.div
+      <div
         className={`feature-icon ${type}`}
-        whileHover={{
-          scale: 1.1,
-          boxShadow: '0 10px 30px rgba(124, 58, 237, 0.5)',
-        }}
-        transition={{ duration: 0.3 }}
       >
         <div className="feature-icon-inner">{icon}</div>
-      </motion.div>
+      </div>
       <h3 style={styles.cardTitle}>{title}</h3>
       <p style={styles.cardDescription}>{description}</p>
     </motion.div>
