@@ -17,9 +17,6 @@ import Footer from './components/footer.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Navbar />
-    {/* Spacer to account for fixed navbar height */}
-    <div style={{ height: '70px' }}></div>
-    
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
