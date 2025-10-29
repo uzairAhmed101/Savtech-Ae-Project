@@ -13,6 +13,11 @@ html, body{
   width: 100%;
 }
 
+/* Add padding to body to account for fixed navbar */
+body {
+  padding-top: 70px;
+}
+
 /* Hide all decorative elements at 696px and below */
 @media (max-width: 696px) {
   .decor-left,
@@ -28,5 +33,10 @@ html, body{
   /* Hide elements with specific alt texts */
   img[alt="Gradient Decorative Element - Bottom Right"] {
     display: none !important;
+  }
+  
+  /* Adjust body padding for smaller screens */
+  body {
+    padding-top: 60px;
   }
 }
