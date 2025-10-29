@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+// Changed from import to using public URL
+// import logoImage from '../assets/Images/Logo.png';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +27,8 @@ const NavBar = () => {
           {/* Logo Section */}
           <div style={styles.navbarLogo}>
             <img 
-              src="/src/assets/Images/Logo.png" 
+              // Using public URL instead of import
+              src="./assets/images/Logo.png" 
               alt="SayTech.Ae Logo" 
               style={styles.logoImage}
             />

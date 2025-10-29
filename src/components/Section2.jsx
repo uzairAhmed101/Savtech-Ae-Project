@@ -1,6 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import leftDecorImage from '../assets/Images/Left-DecoratedElement-Section2.png';
+import section2Logo1 from '../assets/Images/Section2-Logo-1.png';
+import section2Logo2 from '../assets/Images/Section2-Logo-2.png';
+import section2Logo3 from '../assets/Images/Section2-Logo-3.png';
 
 const WhoWeAre = () => {
   return (
@@ -21,7 +25,7 @@ const WhoWeAre = () => {
         viewport={{ once: true, margin: '-50px' }}
       >
         <img
-          src="/src/assets/Images/Left-DecoratedElement-Section2.png"
+          src={leftDecorImage}
           alt="3D Geometric Decorative Element - Top Left"
           style={styles.decorImage}
         />
@@ -196,15 +200,15 @@ const FeatureCard = ({ icon, title, description, type }) => {
 
 /* ---------- Icon Components ---------- */
 const AIIcon = () => (
-  <img src="/src/assets/Images/Section2-Logo-1.png" alt="AI Icon" />
+  <img src={section2Logo1} alt="AI Icon" />
 );
 
 const InfluencerIcon = () => (
-  <img src="/src/assets/Images/Section2-Logo-2.png" alt="Influencer Icon" />
+  <img src={section2Logo2} alt="Influencer Icon" />
 );
 
 const StrategyIcon = () => (
-  <img src="/src/assets/Images/Section2-Logo-3.png" alt="Strategy Icon" />
+  <img src={section2Logo3} alt="Strategy Icon" />
 );
 
 /* ---------- Inline Style Object ---------- */

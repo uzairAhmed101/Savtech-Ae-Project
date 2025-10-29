@@ -1,6 +1,13 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import rightDecorElement from '../assets/Images/Right-DecoratedElement-Section2.webp';
+import component1 from '../assets/Images/Component 1.png';
+import component2 from '../assets/Images/Component 2.png';
+import component3 from '../assets/Images/Component 3.png';
+import component4 from '../assets/Images/Component 4.png';
+import component5 from '../assets/Images/Component 5.png';
+import component6 from '../assets/Images/Component6.png';
 
 const CoreServices = () => {
   const services = [
@@ -72,7 +79,7 @@ const CoreServices = () => {
         viewport={{ once: true, margin: '-50px' }}
       >
         <img
-          src="/src/assets/Images/Right-DecoratedElement-Section2.webp"
+          src={rightDecorElement}
           alt="3D Geometric Decorative Element - Top Right"
           style={styles.decorImage}
         />
@@ -231,7 +238,7 @@ const ServiceCard = ({ service }) => (
 /* ---------- ICON COMPONENTS ---------- */
 const BrainIcon = () => (
   <img
-    src="/src/assets/Images/Component 1.png"
+    src={component1}
     alt="AI Content Strategy"
     style={styles.customIconImage}
   />
@@ -239,7 +246,7 @@ const BrainIcon = () => (
 
 const MegaphoneIcon = () => (
   <img
-    src="/src/assets/Images/Component 2.png"
+    src={component2}
     alt="PR & Media Relations"
     style={styles.customIconImage}
   />
@@ -247,7 +254,7 @@ const MegaphoneIcon = () => (
 
 const HeartIcon = () => (
   <img
-    src="/src/assets/Images/Component 3.png"
+    src={component3}
     alt="Influencer Campaigns"
     style={styles.customIconImage}
   />
@@ -255,7 +262,7 @@ const HeartIcon = () => (
 
 const ChartIcon = () => (
   <img
-    src="/src/assets/Images/Component 4.png"
+    src={component4}
     alt="Analytics & Insights"
     style={styles.customIconImage}
   />
@@ -263,7 +270,7 @@ const ChartIcon = () => (
 
 const UsersIcon = () => (
   <img
-    src="/src/assets/Images/Component 5.png"
+    src={component5}
     alt="Social Media Management"
     style={styles.customIconImage}
   />
@@ -271,7 +278,7 @@ const UsersIcon = () => (
 
 const RocketIcon = () => (
   <img
-    src="/src/assets/Images/Component6.png"
+    src={component6}
     alt="Digital Transformation"
     style={styles.customIconImage}
   />
