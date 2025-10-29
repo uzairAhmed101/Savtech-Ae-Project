@@ -2,7 +2,6 @@ import { HeartIcon } from 'lucide-react';
 import React, { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import HeroVideo from '../assets/Videos/Final 2.mp4';
 
 const HeroSection = () => {
   const [videoEnded, setVideoEnded] = useState(false);
@@ -30,7 +29,8 @@ const HeroSection = () => {
           opacity: videoEnded ? 1 : 1,
         }}
       >
-        <source src={HeroVideo} type="video/mp4" />
+        {/* Using public URL instead of import */}
+        <source src="./assets/videos/Final 2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -55,7 +55,8 @@ const HeroSection = () => {
           @media (max-width: 1280px) {
             .hero-container {
               padding: 120px 2rem !important;
-              height: 100vh !important;
+              /* Changed from height: 100vh to height: auto for better responsiveness */
+              height: auto !important;
             }
             .hero-content h1 {
               font-size: 2.4rem !important;
