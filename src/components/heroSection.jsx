@@ -26,9 +26,10 @@ const HeroSection = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
+          objectFit: 'cover', // Keep cover but adjust positioning
           zIndex: -1,
           opacity: videoEnded ? 1 : 1,
+          objectPosition: 'center top', // Show top of video instead of center
         }}
       >
         {/* Using public URL instead of import */}
@@ -39,11 +40,6 @@ const HeroSection = () => {
       {/* ✅ Responsive Styles */}
       <style>
         {`
-          /* Default styles for all screen sizes */
-          .hero-container {
-            height: auto !important;
-          }
-          
           /* Large screens (4K, wide displays) */
           @media (min-width: 1600px) {
             .hero-content h1 {
@@ -55,21 +51,6 @@ const HeroSection = () => {
             }
             .hero-container {
               padding: 150px 4rem !important;
-              height: auto !important;
-            }
-          }
-
-          /* Laptops & Desktops */
-          @media (min-width: 1281px) and (max-width: 1599px) {
-            .hero-container {
-              padding: 125px 2rem !important;
-              height: auto !important;
-            }
-            .hero-content h1 {
-              font-size: 2.6rem !important;
-            }
-            .hero-content p {
-              font-size: 1.1rem !important;
             }
           }
 
@@ -77,6 +58,7 @@ const HeroSection = () => {
           @media (max-width: 1280px) {
             .hero-container {
               padding: 120px 2rem !important;
+              /* Changed from height: 100vh to height: auto for better responsiveness */
               height: auto !important;
             }
             .hero-content h1 {
@@ -91,7 +73,6 @@ const HeroSection = () => {
           @media (max-width: 1024px) {
             .hero-container {
               padding: 100px 1.5rem !important;
-              height: auto !important;
             }
             .hero-content {
               max-width: 90% !important;
