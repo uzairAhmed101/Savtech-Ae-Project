@@ -1,14 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import Section5Image1 from '../assets/Images/Section5-2.png';
-import Section5Image2 from '../assets/Images/Section5-1.png';
-import section5Img1 from '../assets/Images/Section5-1img.webp';
-import section5Img2 from '../assets/Images/Section5-2img.webp';
-import section5Img3 from '../assets/Images/Section5-3img.webp';
-import section5Img4 from '../assets/Images/Section5-4img.webp';
-import section5Img5 from '../assets/Images/Section5-5img.webp';
-import section5Img6 from '../assets/Images/Section5-6img.webp';
 
 const FeaturedProjects = () => {
   const projects = [
@@ -16,7 +8,7 @@ const FeaturedProjects = () => {
       id: 1,
       title: 'Tech Launch Campaign',
       category: 'AI & Innovation',
-      image: section5Img1,
+      image: './assets/images/Section5-1img.webp',
       size: 'large',
       gridArea: '1 / 1 / 3 / 2'
     },
@@ -24,7 +16,7 @@ const FeaturedProjects = () => {
       id: 2,
       title: 'Dubai Tech Summit',
       category: 'PR & Events',
-      image: section5Img2,
+      image: './assets/images/Section5-2img.webp',
       size: 'large',
       gridArea: '1 / 2 / 3 / 3'
     },
@@ -32,7 +24,7 @@ const FeaturedProjects = () => {
       id: 3,
       title: 'Luxury Brand Influencer Series',
       category: 'Influencer Marketing',
-      image: section5Img3,
+      image: './assets/images/Section5-3img.webp',
       size: 'small',
       gridArea: '1 / 3 / 2 / 4'
     },
@@ -40,7 +32,7 @@ const FeaturedProjects = () => {
       id: 4,
       title: 'Creative Campaign Excellence',
       category: 'Content Creation',
-      image: section5Img4,    
+      image: './assets/images/Section5-4img.webp',    
       size: 'large',
       gridArea: '2 / 3 / 4 / 4'
     },
@@ -48,7 +40,7 @@ const FeaturedProjects = () => {
       id: 5,
       title: 'Social Media Revolution',
       category: 'Digital Strategy',
-      image: section5Img5,
+      image: './assets/images/Section5-5img.webp',
       size: 'small',
       gridArea: '3 / 1 / 4 / 2'
     },
@@ -56,7 +48,7 @@ const FeaturedProjects = () => {
       id: 6,
       title: 'Influencer Marketing Summit',
       category: 'Industry Leadership',
-      image: section5Img6,
+      image: './assets/images/Section5-6img.webp',
       size: 'small',
       gridArea: '3 / 2 / 4 / 3'
     }
@@ -471,7 +463,7 @@ const FeaturedProjects = () => {
           }}
         >
           <img 
-            src={Section5Image1} 
+            src="./assets/images/Section5-2.png" 
             alt="3D Blob Decorative Element - Top Left" 
             className="decor-image"
             style={{
@@ -492,7 +484,7 @@ const FeaturedProjects = () => {
           }}
         >
           <img 
-            src={Section5Image2} 
+            src="./assets/images/Section5-1.png" 
             alt="3D Blob Decorative Element - Bottom Right" 
             className="decor-image"
             style={{
